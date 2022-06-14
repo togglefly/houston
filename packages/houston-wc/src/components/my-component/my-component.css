@@ -1,0 +1,146 @@
+:root {
+  --background-dark-color-primary: #2D2D2D;
+  --background-dark-color-secondary: #1D1B1B;
+  --border-dark: 1px solid #575757;
+  --text-color-dark: #FFFFF8;
+
+  --animation-speed: 0.2s;
+  --background-color: white;
+  --text-color: black;
+  --border: 1px solid black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--background-dark-color-primary);
+    --text-color: var(--text-color-dark);
+    --border: var(--border-dark);
+  }
+}
+
+html {
+  background-color: var(--background-color);
+}
+
+.dialog-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  transition: top var(--animation-speed) ease-out;
+  color: black;
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .dialog-wrapper {
+    transition: none;
+  }
+}
+
+.dialog-body {
+  margin-top: 20px;
+  padding: 0 20px;
+  height: 80%;
+  overflow-y: auto;
+  position: absolute;
+}
+
+.dialog-wrapper__closed {
+  top: -100vh;
+}
+
+/* mobile */
+.dialog-content {
+  width: 90vw;
+  max-width: 100%;
+  height: 90vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 6px;
+  transition:
+    width var(--animation-speed) ease-in-out,
+    height var(--animation-speed) ease-in-out,
+    background-color var(--animation-speed) ease-in-out;
+  border: var(--border);
+  z-index: 101;
+  position: relative;
+}
+
+.dialog-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--background-color);
+  overflow: hidden;
+  z-index: 100;
+  transition:
+    opacity 0.3s ease-in-out,
+    background 0.3s ease-in-out,
+    filter 0.3s ease-in-out
+}
+
+.dialog-mask__open {
+  background: gray;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialog-mask {
+    transition: none;
+  }
+}
+
+.dialog-mask__closed {
+  background: transparent;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialog-content {
+    transition: none;
+  }
+}
+
+.dialog-header {
+  padding: 0 20px;
+  /*color: white;*/
+}
+
+.dialog-header_wrapper {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border);
+  color: var(--text-color);
+}
+
+.close-btn {
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* if width >= 750 */
+@media screen and (min-width: 750px) {
+  .dialog-content {
+    width: 70vw;
+    height: 70vh;
+  }
+}
+
+/* if width >= 1000 */
+@media screen and (min-width: 1000px) {
+  .dialog-content {
+    width: 600px;
+    height: 400px;
+  }
+}

@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/togglefly/houston#readme",
   "dependencies": {
+    "chokidar": "^3.5.3",
+    "esbuild": "^0.14.43",
     "pnpm": "^7.2.1"
   }
 }
