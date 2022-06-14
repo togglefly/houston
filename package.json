@@ -1,0 +1,24 @@
+{
+  "name": "@togglefly/houston",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Manage Offline Users",
+  "main": "index.js",
+  "scripts": {
+    "list": "pnpm ls -r --depth -1 --json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/togglefly/houston.git"
+  },
+  "keywords": [],
+  "author": "Mathias Gheno Azzolini<mathiasgheno@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/togglefly/houston/issues"
+  },
+  "homepage": "https://github.com/togglefly/houston#readme",
+  "dependencies": {
+    "pnpm": "^7.2.1"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@togglefly/houston-react-example",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [],
+  "author": "Mathias Gheno Azzolini<mathiasgheno@gmail.com>",
+  "license": "ISC"
+}

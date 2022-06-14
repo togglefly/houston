@@ -1,0 +1,12 @@
+{
+  "name": "@togglefly/houston-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "Mathias Gheno Azzolini<mathiasgheno@gmail.com>",
+  "keywords": [],
+  "license": "ISC"
+}
